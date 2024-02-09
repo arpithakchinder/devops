@@ -1,0 +1,26 @@
+# .gitlab-ci.yml
+
+stages:
+  - build
+  - test
+  - deploy
+
+variables:
+  APP_NAME: "my-application"
+
+build:
+  stage: build
+  script:
+    - echo "Building the application..."
+
+test:
+  stage: test
+  script:
+    - echo "Running tests..."
+
+deploy:
+  stage: deploy
+  script:
+    - echo "Deploying the application to production..."
+  only:
+    - master
